@@ -1,7 +1,7 @@
 const score = 75;
 const has_submitted_assignments = true;
 let grade = undefined;
-let orderstatus = undefined;
+let order_status = undefined;
 
 if (score >= 0 && score <= 100){
     if(score >= 90){
@@ -18,20 +18,20 @@ if (score >= 0 && score <= 100){
 
 }if(score >= 60 && score <= 100){
     if (has_submitted_assignments == true){
-        orderstatus = "Passed with all homework submitted"
+        order_status = "Passed with all homework submitted"
     }else{
-        orderstatus = "Passed, but missing homework penalty applies."
+        order_status = "Passed, but missing homework penalty applies."
     }
 }else if(score > 50 && score <= 100){
-    orderstatus = "Failed, but eligible for a re-test."
+    order_status = "Failed, but eligible for a re-test."
 
 }else if(score <= 50 && score > 0){
-        orderstatus = "Failed completely. Must retake the course."
+        order_status = "Failed completely. Must retake the course."
 
 }else{
-    orderstatus = "Wrong number";
+    order_status = "Wrong number";
 }
 
 console.log(`Score: ${score}`)
 console.log(`Grade: ${grade}`)
-console.log(`Status: ${orderstatus}`)
+console.log(`Status: ${order_status}`)
